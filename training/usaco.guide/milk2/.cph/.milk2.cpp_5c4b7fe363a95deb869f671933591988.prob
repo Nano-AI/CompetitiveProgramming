@@ -1,1 +1,0 @@
-{"name":"Local: milk2","url":"c:\\Users\\adiba\\Documents\\Coding\\USACO\\milk2\\milk2.cpp","tests":[{"id":1690918602835,"input":"3\n300 1000\n700 1200\n1500 2100","output":"900 300"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\adiba\\Documents\\Coding\\USACO\\milk2\\milk2.cpp","group":"local","local":true}
