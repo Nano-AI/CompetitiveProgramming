@@ -59,6 +59,5 @@ int main() {
 	}	
 
 	cout << min_im << endl;
-
 	return 0;
 }
