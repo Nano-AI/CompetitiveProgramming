@@ -2,23 +2,47 @@
 
 using namespace std;
 
+int n, m, k;
+
+bool check(vector<int> order, vector<int> &hierarchy) {
+  vector<int> cow_to_pos(n, -1);
+  for (int i = 0; i < n; i++) {
+    if (order[i] != -1) {
+      cow_to_pos[order[i]] = -1;
+    }
+  }
+
+}
+
 int main() {
-	int N, M, K; // N cows, M arranged, K specific	
-	cin >> N >> M >> K;
-	vector<int> cows(N);	
-	vector<int> order(M);
-	for (int& i : order) {
-		cin >> i;
-	}
-	for (int i = 0; i < K - 1; i++) {
-		int cow, pos;
-		cin >> cow >> pos;
-		cows[pos] = cow;
-	}
+  cin >> n >> m >> k;
 
-	for (int i = 1; i < order.size(); i++) {
-		
-	}
+  vector<int> hierarchy(m);
+  for (int i = 0; i < m; i++) {
+    cin >> hierarchy[i];
+    hierarchy[i] --;
+  }
 
-	return 0;
+  vector<int> order(n, -1);
+  for (int i = 0; i < k; i++) {
+    int cow, pos;
+    cin >> cow >> pos;
+    order[--pos] = --cow;
+    // if (cow == 0) {
+    //   cout << pos + 1 << endl;
+    //   return 0;
+    // }
+  }
+
+  for (int i = 0; i < n; i++) {
+    if (order[i] == -1) {
+      order[i] = 0;
+      if (check(order, hierarchy)) {
+        cout << i + 1 << endl;
+        break;
+      }
+
+      order[i] = -1;
+    }
+  }
 }
