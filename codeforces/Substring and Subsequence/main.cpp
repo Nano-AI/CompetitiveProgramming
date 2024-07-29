@@ -9,16 +9,16 @@ int main() {
     while (t--) {
         string a, b;
         cin >> a >> b;
-        int i = 0, j = 0;
-        int shared = 0;
-        while (j < b.size()) {
-            if (a[i] == b[j]) {
-                shared++;
-                j++;
+        int n = a.size(), m = b.size();
+        int ans = n + m;
+        for (int i = 0; i < m; ++i) {
+            int j = i;
+            for (auto c : a) {
+                if (j < m && c == b[j]) ++j;
             }
-            i++;
+            ans = min(ans, n + m - (j - i));
         }
-        cout << a.size() + b.size() - shared << endl;
+        cout << ans << '\n';
     }
     return 0;
 }
