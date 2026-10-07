@@ -1,7 +1,7 @@
 # Point clangd at Homebrew GCC's libstdc++ so <bits/stdc++.h> resolves (Apple clang lacks it).
 CompileFlags:
   Add:
-    - -std=c++17
+    - -std=c++20
     - -nostdinc++
     - -isystem/opt/homebrew/opt/gcc/include/c++/16
     - -isystem/opt/homebrew/opt/gcc/include/c++/16/aarch64-apple-darwin25
