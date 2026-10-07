@@ -1,7 +1,10 @@
+a.out
+*.dSYM/
+*.exe
 *.in
 *.out
-*.exe
-*.un~
-*.cpp~
-*.bin
-.cph/
+*.txt
+*.swp
+.DS_Store
+.vscode/
+.idea/
